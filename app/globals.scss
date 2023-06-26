@@ -1,7 +1,12 @@
-html, body, #__next {
-    all: unset;
-    height: 100%;
-    width: 100%;
+html,
+body {
+	all: unset;
+	height: 100%;
+	width: 100%;
+}
+
+main {
+	padding: 1rem;
 }
 
 .green {
@@ -12,5 +17,4 @@ html, body, #__next {
 .red {
 	border: solid 2px red;
 	padding: 1rem;
-
 }
