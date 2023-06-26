@@ -1,16 +1,17 @@
-import './globals.scss';
+import { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 
+import './globals.scss';
 import styles from './layout.module.scss';
-import Header from '@/app/components/Header';
+import Header from '@/components/Header';
 
 const poppins = Poppins({
 	weight: '500',
 	subsets: ['latin'],
 });
 
-export const metadata = {
-	title: 'TA Prototype',
+export const metadata: Metadata = {
+	title: 'App Router Prototype',
 	description: 'Timed auction prototype',
 };
 

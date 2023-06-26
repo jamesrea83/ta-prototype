@@ -9,13 +9,13 @@ const HomePage: NextPage = () => {
 			<h1>Timed Auctions Prototype</h1>
 			<ul>
 				<li>
-					<Link href="/">Home Page</Link>
+					<Link href="/auctions">Timed Auctions</Link>
 				</li>
 				<li>
-					<Link href="/about">About Page</Link>
+					<Link href="/pureSSR">Server Side + Redux</Link>
 				</li>
 				<li>
-					<Link href="/about/team">Team Page</Link>
+					<Link href="/reduxpage">Client Side + Redux</Link>
 				</li>
 			</ul>
 		</div>
