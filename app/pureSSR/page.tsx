@@ -1,5 +1,5 @@
 import { Auction } from '@/types';
-import SSRAuctionsComponent from '@/app/components/SSRAuctionsComponent';
+import SSRAuctionsComponent from '@/app/_components/SSRAuctionsComponent';
 
 import { store } from '@/store';
 import { setIniitialAuctions } from '@/store/searchSlice';
