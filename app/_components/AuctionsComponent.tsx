@@ -1,4 +1,4 @@
-import { Auction } from '@/types';
+import { Auction } from '@/app/_types/Auction';
 
 const AuctionsComponent = ({ auctions }: { auctions: Auction[] }) => {
 	return (

@@ -1,4 +1,4 @@
-import { Auction } from '@/types';
+import { Auction } from '@/app/_types/Auction';
 import SSRAuctionsComponent from '@/app/_components/SSRAuctionsComponent';
 
 import { store } from '@/store';

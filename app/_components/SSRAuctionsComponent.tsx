@@ -1,6 +1,6 @@
 import { store } from '@/store';
 
-import { Auction } from '@/types';
+import { Auction } from '@/app/_types/Auction';
 
 const SSRAuctionsComponent = () => {
 	const auctions: Auction[] = store.getState().search.initialAuctions;

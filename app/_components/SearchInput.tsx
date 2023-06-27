@@ -6,7 +6,7 @@ import type { TypedUseSelectorHook } from 'react-redux';
 import { RootState, AppDispatch } from '@/store';
 import { setSearch } from '@/store/searchSlice';
 import { auctionsApi } from '@/store/auctionsApi';
-import { Auction } from '@/types';
+import { Auction } from '@/app/_types/Auction';
 import AuctionsComponent from '@/app/_components/AuctionsComponent';
 
 export const useAppDispatch: () => AppDispatch = useDispatch;

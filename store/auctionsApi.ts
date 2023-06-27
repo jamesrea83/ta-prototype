@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query';
 
-import { Auction } from '@/types';
+import { Auction } from '@/app/_types/Auction';
 
 export const auctionsApi = createApi({
 	reducerPath: 'auctionsApi',

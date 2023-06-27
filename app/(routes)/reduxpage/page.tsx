@@ -3,7 +3,7 @@ import { setIniitialAuctions } from '@/store/searchSlice';
 import Providers from '@/app/_components/Provider';
 import Preloader from '@/app/_components/Preloader';
 
-import { Auction } from '@/types';
+import { Auction } from '@/app/_types/Auction';
 import SearchInput from '@/app/_components/SearchInput';
 
 export default async function ReduxPage() {

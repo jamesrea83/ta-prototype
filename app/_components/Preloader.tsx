@@ -3,7 +3,7 @@ import { useRef } from 'react';
 
 import { store } from '@/store';
 import { setIniitialAuctions } from '@/store/searchSlice';
-import { Auction } from '@/types';
+import { Auction } from '@/app/_types/Auction';
 
 function Preloader({ auctions }: { auctions: Auction[] }) {
 	const loaded = useRef(false);

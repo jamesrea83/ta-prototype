@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-import { Auction } from '@/types';
+import { Auction } from '@/app/_types/Auction';
 
 export interface SearchState {
 	search: string;
