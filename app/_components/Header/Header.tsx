@@ -9,10 +9,10 @@ const Header = () => {
 				<Link className={styles.navItem} href="/">
 					Home
 				</Link>
-				<Link className={styles.navItem} href="/pureSSR">
+				<Link className={styles.navItem} href="/serverside">
 					Server Side + Redux
 				</Link>
-				<Link className={styles.navItem} href="/reduxpage">
+				<Link className={styles.navItem} href="/clientside">
 					Client Side + Redux
 				</Link>
 			</nav>

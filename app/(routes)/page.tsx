@@ -9,12 +9,14 @@ const HomePage: NextPage = () => {
 			<h1>Timed Auctions Prototype</h1>
 			<ul>
 				<li>
-					<Link href="/pureSSR">Server Side + Redux</Link>
+					<Link href="/serverside">Server Side + Redux</Link>
 				</li>
 				<li>
-					<Link href="/reduxpage">Client Side + Redux</Link>
+					<Link href="/clientside">Client Side + Redux</Link>
 				</li>
 			</ul>
+			<p>Areas bordered in green are Server Side Rendered.</p>
+			<p>Areas bordered in red are Client Side Rendered</p>
 		</div>
 	);
 };

@@ -8,7 +8,7 @@ export const auctionsApi = createApi({
 	tagTypes: ['auction'],
 	endpoints: builder => ({
 		search: builder.query<Auction[], string>({
-			query: q => `search?title=${q}`,
+			query: q => `auctions?title=${q}`,
 			providesTags: (result, error, search) => [{ type: 'auction', search }],
 		}),
 	}),
