@@ -7,11 +7,12 @@ interface Auction {
 }
 
 const localAPI = 'https://demoreact.stream.bid/query2';
+const remoteAPI = 'https://demo.stream.bid/query2';
 
 async function fetchAuctions() {
 	// await new Promise(resolve => setTimeout(resolve, 2000));
 
-	const res = await fetch(localAPI, {
+	const res = await fetch(remoteAPI, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -26,6 +27,7 @@ async function fetchAuctions() {
 	});
 
 	const json = await res.json();
+	console.log('***', json);
 
 	return json.auctions;
 }
