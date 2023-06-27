@@ -1,10 +1,10 @@
 import { store } from '@/store';
 import { setIniitialAuctions } from '@/store/searchSlice';
-import Providers from '@/components/Provider';
-import Preloader from '@/components/Preloader';
+import Providers from '@/app/components/Provider';
+import Preloader from '@/app/components/Preloader';
 
 import { Auction } from '@/types';
-import SearchInput from '@/components/SearchInput';
+import SearchInput from '@/app/components/SearchInput';
 
 export default async function ReduxPage() {
 	const req = await fetch('http://localhost:3000/api/search');

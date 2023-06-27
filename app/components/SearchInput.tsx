@@ -7,7 +7,7 @@ import { RootState, AppDispatch } from '@/store';
 import { setSearch } from '@/store/searchSlice';
 import { auctionsApi } from '@/store/auctionsApi';
 import { Auction } from '@/types';
-import AuctionsComponent from '@/components/AuctionsComponent';
+import AuctionsComponent from '@/app/components/AuctionsComponent';
 
 export const useAppDispatch: () => AppDispatch = useDispatch;
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
