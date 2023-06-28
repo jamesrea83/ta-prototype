@@ -1,3 +1,5 @@
+import { Auction } from '@/app/_types/Auction';
+
 const localAPI = 'https://demoreact.stream.bid/query2';
 const remoteAPI = 'https://demo.stream.bid/query2';
 
@@ -11,11 +13,14 @@ export default async function getAllAuctions() {
 			Action: 'Req-AuctionsBasic',
 			userTokenID: '',
 		}),
-		cache: 'no-cache',
 	});
 
-	if (!res.ok) throw new Error('Failed to fetch data');
+	if (!res.ok) {
+		throw new Error('Failed to fetch data');
+	}
 
-	const json = await res.json();
-	return json.auctions;
+	const data = await res.json();
+	const auctions: Auction[] = data.auctions;
+
+	return auctions;
 }

@@ -13,15 +13,14 @@ export default async function getAuction(auctionID: string) {
 			Action: 'Req-AuctionsBasic',
 			userTokenID: '',
 		}),
-		cache: 'no-cache',
 	});
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
 	}
 
-	const json = await res.json();
-	const auctions: Auction[] = json.auctions;
+	const data = await res.json();
+	const auctions: Auction[] = data.auctions;
 	const auction = auctions.find(auction => auction.auctionID === auctionID);
 
 	return auction;

@@ -19,7 +19,6 @@ async function fetchAuctions() {
 			Action: 'Req-AuctionsBasic',
 			userTokenID: '',
 		}),
-		cache: 'no-cache',
 	});
 
 	const json = await res.json();

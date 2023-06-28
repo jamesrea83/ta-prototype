@@ -1,17 +1,11 @@
-import { store } from '@/store';
-import { setIniitialAuctions } from '@/store/searchSlice';
-
+import getAllAuctions from '@/lib/getAllAuctions';
 import Providers from '@/app/_components/Provider';
 import Preloader from '@/app/_components/Preloader';
-
 import { Auction } from '@/app/_types/Auction';
 import SearchInput from '@/app/(routes)/clientside/SearchInput';
 
 export default async function ClientSidePage() {
-	const req = await fetch('http://localhost:3000/api/auctions');
-	const auctions: Auction[] = await req.json();
-
-	// store.dispatch(setIniitialAuctions(auctions));
+	const auctions: Auction[] = await getAllAuctions();
 
 	return (
 		<div className="green">

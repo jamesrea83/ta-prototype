@@ -1,13 +1,11 @@
-import { Auction } from '@/app/_types/Auction';
+import getAllAuctions from '@/lib/getAllAuctions';
 import SSRAuctionsComponent from '@/app/(routes)/serverside/SSRAuctionsComponent';
 
 import { store } from '@/store';
 import { setIniitialAuctions } from '@/store/searchSlice';
 
 export default async function ServerSidePage() {
-	const req = await fetch('http://localhost:3000/api/auctions');
-	const auctions: Auction[] = await req.json();
-
+	const auctions = await getAllAuctions();
 	store.dispatch(setIniitialAuctions(auctions));
 
 	return (
