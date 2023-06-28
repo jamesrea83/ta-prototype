@@ -19,6 +19,9 @@ async function fetchAuctions() {
 			Action: 'Req-AuctionsBasic',
 			userTokenID: '',
 		}),
+		next: {
+			revalidate: 60,
+		},
 	});
 
 	const json = await res.json();
