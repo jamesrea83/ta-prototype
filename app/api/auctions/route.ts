@@ -1,10 +1,6 @@
 import { NextResponse } from 'next/server';
 
-interface Auction {
-	title: string;
-	date: string;
-	auctionID: string;
-}
+import { Auction } from '@/app/_types/Auction';
 
 const localAPI = 'https://demoreact.stream.bid/query2';
 const remoteAPI = 'https://demo.stream.bid/query2';
@@ -31,13 +27,23 @@ async function fetchAuctions() {
 
 export async function GET(req: Request) {
 	console.log('GET Auctions');
-	// const { searchParams } = new URL(req.url);
-	// const title = searchParams.get('title');
+	const { searchParams } = new URL(req.url);
+	const title = searchParams.get('title');
+	const auctionID = searchParams.get('auctionID');
 	const auctions: Auction[] = await fetchAuctions();
-	// const searchedAuctions = auctions.filter(auction =>
-	// 	auction.title.toLowerCase().includes(title?.toLowerCase() ?? '')
-	// );
+	console.log('************', auctionID, title);
+	if (title) {
+		const searchedAuctions = auctions.filter(auction =>
+			auction.title.toLowerCase().includes(title?.toLowerCase() ?? '')
+		);
 
-	// return NextResponse.json(searchedAuctions);
+		return NextResponse.json(searchedAuctions);
+	}
+
+	if (auctionID) {
+		const target = auctions.filter(auction => auction.auctionID === auctionID);
+		return NextResponse.json(target);
+	}
+
 	return NextResponse.json(auctions);
 }
