@@ -4,10 +4,8 @@ import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import path from 'path';
 const previewAnnotations: StorybookConfig = {
 	stories: [
-		'../stories/**/*.mdx',
-		'../stories/**/*.stories.@(js|jsx|ts|tsx)',
-		'../components/**/*.mdx',
-		'../components/**/*.stories.@(js|jsx|ts|tsx)',
+		'../app/_components/**/*.mdx',
+		'../app/_components/**/*.stories.@(js|jsx|ts|tsx)',
 	],
 	staticDirs: ['../public'],
 	addons: [
